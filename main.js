@@ -124,7 +124,41 @@ function my_keydown(e){
 }
 
 function right(){
+    if (player_x<=653){
     player_x+= block_img_width;
     canvas.remove(player_obj);
     player_update();
+console.log("x= "+player_x+"y= "+player_y);
+console.log("block width "+block_img_width);
+}
+}
+
+function left(){
+    if (player_x>=0){
+    player_x-= block_img_width;
+    canvas.remove(player_obj);
+    player_update();
+console.log("x= "+player_x+"y= "+player_y);
+console.log("block width "+block_img_width);
+}
+}
+
+function down(){
+    if (player_y<=460){
+    player_y+= block_img_height;
+    canvas.remove(player_obj);
+    player_update();
+console.log("x= "+player_x+"y= "+player_y);
+console.log("block width "+block_img_height);
+}
+}
+
+function up(){
+    if (player_y>0){
+    player_y-= block_img_height;
+    canvas.remove(player_obj);
+    player_update();
+console.log("x= "+player_x+"y= "+player_y);
+console.log("block width "+block_img_height);
+}
 }
